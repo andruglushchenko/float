@@ -1,9 +1,21 @@
+@font-face {
+    font-family: 'Myriad Pro';
+    src: url('../fonts/MyriadPro-Regular.eot');
+    src: url('../fonts/MyriadPro-Regular.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/MyriadPro-Regular.woff2') format('woff2'),
+    url('../fonts/MyriadPro-Regular.woff') format('woff'),
+    url('../fonts/MyriadPro-Regular.ttf') format('truetype'),
+    url('../fonts/MyriadPro-Regular.svg#MyriadPro-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
 body{
     margin: 0;
     padding: 0;
     background: #fff;
     /*font-family: 'Quicksand', sans-serif;*/
     /*font-family: 'Source Sans Pro', sans-serif;*/
+    /*font-family: 'Myriad Pro', sans-serif;*/
 }
 
 /*reset style*/
@@ -28,6 +40,10 @@ ul{
 .right {
     float: right;
 }
+.center{
+    text-align: center;
+}
+
 /*===============================*/
 
 /*container*/
@@ -60,45 +76,47 @@ h2{
     line-height: 30px;
     font-weight: 600;
 
-    margin-bottom: 110px;
+    margin-bottom: 90px;
 
 }
 h2:before{
     position: absolute;/*position: absolute h2*/
     display: block;
     content: '';
-    width: 42px;
+    width: 20px;
     height: 2px;
     background:#008ed6;
 
     margin:auto;
     top:65px;
     right: 0;
-    left: 0;
+    left:-22px;
 
 }
 h2:after{
     position: absolute;/*position: absolute h2*/
     display: block;
     content: '';
-    width:2px;
+    width: 20px;
     height: 2px;
-    background:#fff;
+    background:#008ed6;
 
     margin:auto;
     top:65px;
-    right: 0;
-    left: 0;
+    right:-22px;
+    left:0;
+
 }
 .item h2{
     margin-bottom: 60px;
 }
 .item h2:before{
     margin: 0;
+    left: 0;
 }
 .item h2:after{
     margin: 0;
-    left: 20px;
+    left:22px;
 }
 h3{
     font-family: 'Source Sans Pro', sans-serif;
@@ -108,6 +126,18 @@ h3{
     font-weight: 400;
 
     margin-bottom: 18px;
+}
+h4{
+    font-family: 'Source Sans Pro', sans-serif;
+    color: #000;
+    font-size: 24px;
+    line-height: 24px;
+    font-weight: 700;
+    text-transform: uppercase;
+
+    padding-bottom: 24px;
+    border-bottom: solid 1px #4d4d53;
+    transition: 0.4s;
 }
 h5{
     font-family: 'Quicksand', sans-serif;
@@ -121,6 +151,32 @@ h5{
     margin-bottom: 27px;
 }
 /*=========================================*/
+
+/*btn*/
+.btn{
+    display: inline-block;
+
+    font-family: 'Source Sans Pro', sans-serif;
+    color: #fff;
+    font-size: 14px;
+    line-height: 50px;
+    font-weight: 700;
+    text-transform: uppercase;
+
+    min-width: 160px;
+    border:solid 1px #4d4d53;
+    border-radius: 3px;
+    text-align: center;
+    background: transparent;
+
+    margin-right: 18px;
+    transition: 0.4s;
+}
+.btn:hover{
+    background: #008ed6;
+    border:solid 1px #008ed6;
+}
+/*=============================*/
 
 /*intro*/
 .intro {
@@ -148,28 +204,7 @@ h5{
     display: block;
     width: 100%;
 }
-.intro .btn{
-    display: inline-block;
 
-    font-family: 'Source Sans Pro', sans-serif;
-    color: #fff;
-    font-size: 14px;
-    line-height: 50px;
-    font-weight: 700;
-    text-transform: uppercase;
-
-    min-width: 160px;
-    border:solid 1px #4d4d53;
-    border-radius: 3px;
-    text-align: center;
-
-    margin-right: 18px;
-    transition: 0.4s;
-}
-.intro .btn:hover{
-    background: #008ed6;
-    border:solid 1px #008ed6;
-}
 /*===============================*/
 
 /*header*/
@@ -194,12 +229,14 @@ header nav ul:after{
 header nav ul li{
     position: relative;
     display: inline-block;
+
     margin-left: 24px;
     float: right;
 }
 header nav ul li:before{/*position: absolute li*/
     position: absolute;
     display: block;
+
     content: '';
     width: 100%;
     height: 2px;
@@ -213,6 +250,7 @@ header nav ul li:before{/*position: absolute li*/
 header nav ul li:after{/*position: absolute li*/
     position: absolute;
     display: block;
+
     content: '';
     width:2px;
     height: 2px;
@@ -248,6 +286,7 @@ header nav ul li a{
 
 .features .item{
     display: inline-block;
+
     width: 24%;
     padding: 0 30px;
 }
@@ -350,3 +389,359 @@ header nav ul li a{
     display: block;
     width: 100%;
 }
+/*=====================================*/
+
+/*Testimonials*/
+.Testimonials{
+    padding: 60px 0;
+    background: url("../images/testimonials_bg.jpg") center top;
+    background-size: cover;
+}
+.Testimonials h2{
+    color: #fff;
+}
+.Testimonials .slider{
+    margin-bottom: 130px;
+}
+.Testimonials .slider:after{
+    display: block;
+    content: '';
+    clear: both;
+}
+.Testimonials .slider .item{
+    width: 50%;
+    padding-right: 30px;
+}
+.Testimonials .slider .item p{
+    font-family: 'Source Sans Pro', sans-serif;
+    color: #fff;
+    font-size: 24px;
+    line-height: 24px;
+    font-weight: 300;
+    font-style: italic;
+
+    margin-bottom: 30px;
+}
+.Testimonials .slider .item .for_image_radius{
+    display: inline-block;
+
+    width:60px ;
+    height:60px ;
+    border-radius: 50%;
+    background: #008ed6;
+    overflow: hidden;
+}
+.Testimonials .slider .item .for_image_radius img{
+    display: block;
+    width: 100%;
+}
+.Testimonials .slider .item .position{
+    display: inline-block;
+
+    font-family: 'Source Sans Pro', sans-serif;
+    color: #fff;
+    font-size: 13px;
+    line-height: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0;
+
+    margin-left: 20px;
+}
+.Testimonials .slider .item .position span{
+    all: initial;
+    display: block;
+
+    font-family: 'Source Sans Pro', sans-serif;
+    color: #fff;
+    font-size: 14px;
+    line-height: 14px;
+    font-weight: 300;
+
+    margin-bottom: 15px;
+}
+.Testimonials ul{
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+}
+.Testimonials ul li{
+    display: inline-block;
+
+    width: 7px;
+    height: 7px;
+    border: solid 1px #4d4d53 ;
+    border-radius: 50%;
+
+    margin-right: 20px;
+}
+.Testimonials ul li:nth-of-type(4){
+    margin-right:0;
+}
+.Testimonials ul li.active{
+    width: 14px;
+    height: 14px;
+    border: solid 1px #fff ;
+    background: #fff;
+}
+/*===================================*/
+
+/*get*/
+
+.get{
+    background:#15141a ;
+    padding: 60px 0;
+}
+.get p{
+    font-family: 'Source Sans Pro', sans-serif;
+    color: #fff;
+    font-size: 30px;
+    line-height: 30px;
+    font-weight: 600;
+}
+.get p span{
+    font-weight: 300;
+    opacity: 0.5;
+
+    margin-left: 5px;
+}
+/*====================================*/
+
+/*pricing*/
+.pricing{
+    padding: 60px 0;
+    background: #fff;
+}
+.pricing .item{
+    display: inline-block;
+
+    padding: 27px 0;
+    width: 23.71%;
+    border: solid 1px #4d4d53;
+    text-align: center;
+}
+.pricing .item:nth-of-type(2){
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.pricing .item:nth-of-type(3){
+    margin-right: 20px;
+}
+.pricing .item .price{
+    font-family: 'Source Sans Pro', sans-serif;
+    color: #000;
+    font-size: 45px;
+    line-height: 45px;
+    font-weight: 700;
+
+    padding:40px 0 35px;
+    border-bottom: solid 1px #4d4d53;
+    transition: 0.4s;
+}
+.pricing .item .price sup{
+    font-family: 'Source Sans Pro', sans-serif;
+    color: #000;
+    font-size: 20px;
+    line-height: 1;
+    font-weight: 700;
+
+    transition: 0.4s;
+}
+.pricing .item .price:after{
+    display: block;
+
+    content: '/per month';
+    font-family: 'Source Sans Pro', sans-serif;
+    color: #4d4d53;
+    font-size: 17px;
+    line-height: 17px;
+    font-weight: 400;
+}
+.pricing .item ul{
+    padding: 50px 0;
+}
+.pricing .item ul li{
+    font-family: 'Source Sans Pro', sans-serif;
+    color: #4d4d53;
+    font-size: 18px;
+    line-height:30px;
+    font-weight: 400;
+}
+.pricing .item ul li span{
+    color: #008ed6;
+}
+.pricing .btn{
+    color: #008ed6;
+    line-height: 45px;
+
+    margin-right: 0;
+    /*transition: 0.4s;*/
+}
+.pricing .item:hover h4 {
+    color: #008ed6;
+    border-bottom: solid 1px #008ed6;
+}
+.pricing .item:hover .price{
+    background: #008ed6;
+    color: #fff;
+    border-bottom: solid 1px #008ed6;
+}
+.pricing .item:hover .price sup{
+    color: #fff;
+}
+.pricing .item:hover .price:after{
+    color: #fff;
+}
+.pricing .item:hover .btn{
+    color: #fff;
+    background: #008ed6;
+    border:solid 1px #008ed6;
+}
+/*================================*/
+
+/*contacts*/
+footer{
+    position: relative;
+    padding:60px 0 370px ;
+    background: #ededed;
+}
+/*form*/
+form{
+    position: absolute; /*position: absolute .contacts;*/
+    max-width: 770px;
+    background: #15141a;
+    padding: 60px 85px 45px 65px;
+
+    margin: auto;
+    right: 0;
+    left: 0;
+    top:420px;
+}
+form:after{
+    display: block;
+    content: '';
+    clear: both;
+}
+form input{
+    display: block;
+
+    width: 297px;
+    line-height: 47px;
+    border:solid 1px #4d4d53;
+    background: transparent;
+    padding-left: 18px;
+
+    margin-bottom: 18px;
+}
+form textarea{
+    max-width: 290px;
+    width: 100%;
+    height: 184px;
+    background: transparent;
+    border:solid 1px #4d4d53 ;
+    padding-left: 18px;
+    padding-top: 20px;
+}
+form ::-webkit-input-placeholder {
+    font-family: 'Myriad Pro', sans-serif;
+    color: #4d4d53;
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+form .btn{
+    margin-right: 0;
+}
+footer .item{
+    width: 33.333333%;
+    padding: 0 110px;
+    text-align: center;
+}
+footer .item p{
+    font-family: 'Source Sans Pro', sans-serif;
+    color: #4d4d53;
+    font-size: 18px;
+    line-height: 18px;
+    font-weight: 400;
+}
+footer .item p:before{
+    margin-bottom: 30px;
+}
+footer .item .iphone:before{
+    display: block;
+    content: url("../images/iphone.png");
+}
+footer .item .sign-map:before{
+     display: block;
+     content: url("../images/map.png");
+ }
+footer .item .envelope:before{
+    display: block;
+    content: url("../images/envelope.png");
+}
+/*=========================================*/
+
+/*copyright*/
+.copyright{
+    background:#15141a ;
+    padding:50px 0 40px ;
+}
+.copyright a{
+    display: inline-block;
+
+    width:30px;
+    line-height: 14px;
+
+    margin-bottom: 30px;
+}
+.copyright a:before{
+    display: inline-block;
+
+    font-family: "Font Awesome\ 5 Brands", "Font Awesome\ 5 Free",sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 14px;
+    color: #444348;
+
+    transition: 0.4s;
+}
+.copyright .behance:before{
+    content: '\f1b4';
+}
+.copyright .pinterest:before{
+    content: '\f231';
+}
+.copyright .twitter:before{
+    content: '\f099';
+}
+.copyright .facebook:before{
+    content: '\f39e';
+}
+.copyright .linked:before {
+    content: '\f0e1';
+}
+.copyright .behance:hover:before{
+    color: red;
+}
+.copyright .pinterest:hover:before{
+    color: deeppink;
+}
+.copyright .twitter:hover:before{
+    color: #008ed6;
+}
+.copyright .facebook:hover:before{
+    color:blue;
+}
+.copyright .linked:hover:before{
+    color:green;
+}
+.copyright p{
+    font-family: 'Source Sans Pro', sans-serif;
+    color: #444348;
+    font-size: 14px;
+    line-height:14px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+/*=====================================*/
