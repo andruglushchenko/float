@@ -118,6 +118,7 @@ h2:after{
     margin: 0;
     left:22px;
 }
+
 h3{
     font-family: 'Source Sans Pro', sans-serif;
     color: #000;
@@ -383,7 +384,7 @@ header nav ul li a{
     margin-bottom: 60px;
 }
 .customize .for_image{
-    max-width: 700px;
+    max-width: 661px;
 }
 .customize .for_image img{
     display: block;
@@ -517,7 +518,8 @@ header nav ul li a{
     display: inline-block;
 
     padding: 27px 0;
-    width: 23.71%;
+    max-width: 23.71%;
+    width: 100%;
     border: solid 1px #4d4d53;
     text-align: center;
 }
@@ -602,31 +604,33 @@ header nav ul li a{
 
 /*contacts*/
 footer{
-    position: relative;
-    padding:60px 0 370px ;
+    padding-top:60px;
     background: #ededed;
 }
 /*form*/
 form{
-    position: absolute; /*position: absolute .contacts;*/
+    position: relative;  /*position: relative;*/
+
     max-width: 770px;
     background: #15141a;
-    padding: 60px 85px 45px 65px;
+    padding: 60px 65px 45px;
+    top:70px;
 
     margin: auto;
-    right: 0;
-    left: 0;
-    top:420px;
 }
 form:after{
     display: block;
     content: '';
     clear: both;
 }
-form input{
+form .input_group{
+    max-width: 297px;
+    width: 100%;
+}
+form .input_group input{
     display: block;
 
-    width: 297px;
+    width: 100%;
     line-height: 47px;
     border:solid 1px #4d4d53;
     background: transparent;
@@ -678,6 +682,7 @@ footer .item .sign-map:before{
  }
 footer .item .envelope:before{
     display: block;
+    height: 32px;
     content: url("../images/envelope.png");
 }
 /*=========================================*/
@@ -734,7 +739,7 @@ footer .item .envelope:before{
     color:blue;
 }
 .copyright .linked:hover:before{
-    color:green;
+    color:white;
 }
 .copyright p{
     font-family: 'Source Sans Pro', sans-serif;
